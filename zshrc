@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/r21.1/
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
 export GNUTERM=x11
+export PYTHONSTARTUP=~/.pythonstart
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

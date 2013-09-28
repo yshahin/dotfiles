@@ -3,11 +3,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 #Alias hub to git
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundler gem brew osx rbenv heroku vagrant mycode)
+plugins=(git bundler gem brew osx rbenv heroku github vagrant mycode)
 
 source $ZSH/oh-my-zsh.sh
 

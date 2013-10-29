@@ -17,6 +17,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X1
 export GNUTERM=x11
 export PYTHONSTARTUP=~/.pythonstart
 export VAGRANT_DEFAULT_PROVIDER=parallels
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

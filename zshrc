@@ -9,7 +9,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundler gem brew osx rbenv heroku github vagrant mycode)
+plugins=(git bundle gem brew osx rbenv heroku github vagrant mycode)
 
 source $ZSH/oh-my-zsh.sh
 

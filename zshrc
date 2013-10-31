@@ -2,6 +2,8 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 #Alias hub to git
 #eval "$(hub alias -s)"
 
@@ -18,6 +20,4 @@ export GNUTERM=x11
 export PYTHONSTARTUP=~/.pythonstart
 export VAGRANT_DEFAULT_PROVIDER=parallels
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

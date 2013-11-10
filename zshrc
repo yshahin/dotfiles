@@ -13,7 +13,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Enviroment variables
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
+export PATH=/usr/local/share/npm/bin:${PATH}:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
+#export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
 export GNUTERM=x11
 export PYTHONSTARTUP=~/.pythonstart
 export VAGRANT_DEFAULT_PROVIDER=parallels

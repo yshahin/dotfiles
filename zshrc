@@ -2,18 +2,15 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-#Alias hub to git
-#eval "$(hub alias -s)"
-
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundle gem brew osx rbenv heroku github vagrant mycode)
+plugins=(git bundle osx rbenv heroku github vagrant mycode)
 
 source $ZSH/oh-my-zsh.sh
 
 # Enviroment variables
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=/usr/local/share/npm/bin:${PATH}:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
+export PATH=/usr/local/share/npm/bin:/usr/local/sbin:${PATH}:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
 #export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
 export GNUTERM=x11
 export PYTHONSTARTUP=~/.pythonstart

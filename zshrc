@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundle brew osx rbenv gem heroku github vagrant mycode)
+plugins=(git bundler brew osx rbenv gem heroku github vagrant mycode)
 
 source $ZSH/oh-my-zsh.sh
 

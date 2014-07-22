@@ -23,6 +23,11 @@ export PATH=/Applications/Postgres.app/Contents/MacOS/bin:${PATH}
 #export PATH=~/Developer/work/Playground/pebble-dev/PebbleSDK-2.0-BETA5/bin:$PATH
 #export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
 ##
+### GO Lang
+###
+export PATH=${PATH}:/usr/local/opt/go/bin/
+export GOPATH=$HOME/.golang
+##
 ### Android SDK
 ###
 export ANDROID_SDK=/usr/local/opt/android-sdk

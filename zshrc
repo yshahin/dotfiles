@@ -15,25 +15,30 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Enviroment variables
+BREW_PREFIX=`brew --prefix`
 ##
 ### PATH
 ###
 export PATH=/usr/local/share/npm/bin:/usr/local/sbin:${PATH}
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:${PATH}
-#export PATH=~/Developer/work/Playground/pebble-dev/PebbleSDK-2.0-BETA5/bin:$PATH
-#export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
+##
+### Haskell
+###
+export PATH=$HOME/.cabal/bin:${PATH}
 ##
 ### GO Lang
 ###
-export PATH=${PATH}:/usr/local/opt/go/bin/
+export PATH=${PATH}:/usr/local/opt/go/bin
 export GOPATH=$HOME/.golang
 ##
 ### Android SDK
 ###
-export ANDROID_SDK=/usr/local/opt/android-sdk
-export ANDROID_NDK=/usr/local/Cellar/android-ndk/22.3
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=${PATH}:${ANDROID_HOME}platform-tools:${ANDROID_HOME}tools
+export ANDROID_SDK=/Users/yshahin/Library/Android/sdk
+#export ANDROID_SDK=/usr/local/opt/android-sdk
+#export ANDROID_NDK=/usr/local/opt/android-ndk
+export ANDROID_HOME=/Users/yshahin/Library/Android/sdk
+#export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 ##
 ### Vagrant
 ###
@@ -52,13 +57,15 @@ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 ##
 ### Python
 ###
-export PYTHONSTARTUP=~/.pythonstart
+#export PYTHONSTARTUP=~/.pythonstart
+#export PATH=$BREW_PREFIX/share/python:$BREW_PREFIX/bin/:$BREW_PREFIX/sbin:$PATH
+#export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages:$PYTHONPATH
 ##
 ### Rbenv
 ###
 #export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 eval "$(direnv hook $0)"
 

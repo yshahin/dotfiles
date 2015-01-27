@@ -7,10 +7,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git bundler brew osx rbenv gem heroku github vagrant mycode)
 
 # Move next only if `homebrew` is installed
-if command -v brew >/dev/null 2>&1; then
+#if command -v brew >/dev/null 2>&1; then
   # Load rupa's z if installed
-  . `brew --prefix`/etc/profile.d/z.sh
-fi
+#  . `brew --prefix`/etc/profile.d/z.sh
+#fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,7 +43,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 ### Vagrant
 ###
 export VAGRANT_DEFAULT_PROVIDER=parallels
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 ##
 ### Quartz
 ###
@@ -67,5 +67,5 @@ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-eval "$(direnv hook $0)"
+#eval "$(direnv hook $0)"
 

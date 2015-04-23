@@ -22,6 +22,10 @@ BREW_PREFIX=`brew --prefix`
 export PATH=/usr/local/share/npm/bin:/usr/local/sbin:${PATH}
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:${PATH}
 ##
+### Mono
+###
+export MONO_GAC_PREFIX="/usr/local"
+##
 ### Haskell
 ###
 export PATH=$HOME/.cabal/bin:${PATH}
@@ -43,7 +47,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 ### Vagrant
 ###
 export VAGRANT_DEFAULT_PROVIDER=parallels
-#export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 ##
 ### Quartz
 ###
@@ -63,7 +66,6 @@ export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 ##
 ### Rbenv
 ###
-#export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 

@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundler brew osx rbenv gem heroku github vagrant mycode)
+plugins=(git bundler brew osx rbenv gem heroku github vagrant mix npm node  mycode)
 
 # Move next only if `homebrew` is installed
 #if command -v brew >/dev/null 2>&1; then

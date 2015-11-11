@@ -1,6 +1,6 @@
-c() { cd ~/Developer/work/$1;  }
+c() { cd ~/Developer/Work/$1;  }
 
-_c() { _files -W ~/Developer/work -/; }
+_c() { _files -W ~/Developer/Work -/; }
 compdef _c c
 
 oss() { cd ~/Developer/OSS/$1;  }

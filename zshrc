@@ -4,7 +4,12 @@ ZSH_THEME="robbyrussell"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git bundler brew osx rbenv gem heroku github vagrant mix npm node  mycode)
+plugins=(\
+  git bundler brew osx \
+  docker boot2docker docker-machine docker-compose \
+  rbenv gem heroku github vagrant \
+  mix npm node mycode \
+)
 
 # Move next only if `homebrew` is installed
 #if command -v brew >/dev/null 2>&1; then
@@ -14,4 +19,6 @@ plugins=(git bundler brew osx rbenv gem heroku github vagrant mix npm node  myco
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.dotfiles/env_variables
+source $HOME/.dotfiles/zsh_aliases
+source $HOME/.dotfiles/zsh_envs
+

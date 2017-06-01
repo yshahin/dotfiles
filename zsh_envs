@@ -1,40 +1,35 @@
 # Enviroment variables
 BREW_PREFIX=`brew --prefix`
-##
-### PATH
-###
+### PATH ###
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:${PATH}
-##
-### Mono
-###
+
+### JAVA ###
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+### Mono ###
 export MONO_GAC_PREFIX="/usr/local"
-##
-### Haskell
-###
+
+### Haskell ###
 export PATH=$HOME/.cabal/bin:${PATH}
-##
-### GO Lang
-###
+
+### GO Lang ###
 #export PATH=${PATH}:/usr/local/opt/go/libexec/bin
 export PATH=${PATH}:/usr/local/opt/go/bin
 export GOPATH=$HOME/.golang
-##
-### Android SDK
-###
+
+### Android SDK ###
 export ANDROID_SDK=/Users/yshahin/Library/Android/sdk
 export ANDROID_HOME=/Users/yshahin/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 #export ANDROID_SDK=/usr/local/opt/android-sdk
 #export ANDROID_NDK=/usr/local/opt/android-ndk
 #export ANDROID_HOME=/usr/local/opt/android-sdk
-##
-### Vagrant
-###
+
+### Vagrant ###
 export VAGRANT_DEFAULT_PROVIDER=parallels
-##
-### Quartz
-###
+
+### Quartz ###
 export GNUTERM=x11
 export LC_CTYPE="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -42,33 +37,31 @@ export LC_TIME="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
-##
-### Python
-###
+
+### Python ###
 #export PYTHONSTARTUP=~/.pythonstart
 #export PATH=$BREW_PREFIX/share/python:$BREW_PREFIX/bin/:$BREW_PREFIX/sbin:$PATH
 #export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages:$PYTHONPATH
-##
-##
-### PHP
-###
+
+### PHP ###
 export PATH="/Users/yshahin/.composer/vendor/bin:$PATH"
 #export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-##
-### Env
-###
+
+### Cuda ###
+export DYLD_LIBRARY_PATH='/usr/local/cuda/lib':$DYLD_LIBRARY_PATH
+
+### Env ####
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 #if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; fi
-##
-### DNX
-###
-source dnvm.sh
-export MONO_MANAGED_WATCHER=disabled
-##
-### NVM
-###
+
+### DotNet ###
+export PATH="$PATH:/usr/local/share/dotnet"
+#source dnvm.sh
+#export MONO_MANAGED_WATCHER=disabled
+
+### NVM ###
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
 

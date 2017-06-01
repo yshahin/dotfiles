@@ -11,3 +11,8 @@ compdef _oss oss
 _meteor() { }
 compdef _meteor meteor
 
+gt() { cd ~/Developer/GaTech/$1;  }
+
+_gt() { _files -W ~/Developer/GaTech -/; }
+compdef _gt gt
+

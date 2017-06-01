@@ -1,5 +1,5 @@
-alias buuc='brew update && brew upgrade && brew cleanup'
+alias buuc='brew update "$@" && brew upgrade && brew cleanup'
 alias k=docker
-alias km=docker-machine-parallels
-alias kmv=docker-machine
+alias km=docker-machine
+alias brew_reset='cd $(brew --repo); git fetch; git reset --hard origin/master;popd'
 

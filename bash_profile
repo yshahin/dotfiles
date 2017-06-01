@@ -1,2 +1,2 @@
 #Load in enviroment varialbes
-source $HOME/.dotfiles/env_variables
+source $HOME/.dotfiles/zsh_envs

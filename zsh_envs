@@ -27,7 +27,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 #export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ### Vagrant ###
-export VAGRANT_DEFAULT_PROVIDER=parallels
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 ### Quartz ###
 export GNUTERM=x11
@@ -39,20 +39,27 @@ export LC_MONETARY="en_US.UTF-8"
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
 
 ### Python ###
-#export PYTHONSTARTUP=~/.pythonstart
-#export PATH=$BREW_PREFIX/share/python:$BREW_PREFIX/bin/:$BREW_PREFIX/sbin:$PATH
-#export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages:$PYTHONPATH
+export PYENV_ROOT=/usr/local/opt/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ### PHP ###
 export PATH="/Users/yshahin/.composer/vendor/bin:$PATH"
 #export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
-### Cuda ###
-export DYLD_LIBRARY_PATH='/usr/local/cuda/lib':$DYLD_LIBRARY_PATH
+### Cuda ##
+export PATH=/Developer/NVIDIA/CUDA-10.0/bin${PATH:+:${PATH}}
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-10.0/lib${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+#export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/usr/local/cuda/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+#export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+
+### GetText ###
+export PATH=/usr/local/opt/gettext/bin:$PATH
 
 ### Env ####
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 #if which docker-machine > /dev/null; then eval "$(docker-machine env default)"; fi
 
@@ -64,6 +71,9 @@ export PATH="$PATH:/usr/local/share/dotnet"
 ### NVM ###
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
+
+### QT ###
+export PATH="/usr/local/opt/qt/bin:$PATH"
 
 #eval "$(direnv hook $0)
 

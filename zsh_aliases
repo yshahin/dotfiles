@@ -1,5 +1,7 @@
 alias buuc='brew update "$@" && brew upgrade && brew cleanup'
 alias k=docker
 alias km=docker-machine
+alias kc=docker-compose
 alias brew_reset='cd $(brew --repo); git fetch; git reset --hard origin/master;popd'
+alias lolp='ping 104.160.142.3'
 

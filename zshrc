@@ -7,8 +7,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(\
   git bundler brew osx \
   docker boot2docker docker-machine docker-compose \
-  rbenv gem heroku github vagrant \
-  pyenv \
+  rbenv gem github pyenv \
   mix npm node mycode zsh-completions \
 )
 

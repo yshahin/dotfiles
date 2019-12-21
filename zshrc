@@ -5,19 +5,17 @@ ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(\
-  git bundler brew osx \
-  docker boot2docker docker-machine docker-compose \
-  rbenv gem github pyenv \
-  mix npm node mycode zsh-completions \
+    git brew osx \
+    docker docker-machine docker-compose \
+    mycode \
+    zsh-completions\
 )
 
-autoload -U compinit && compinit
-
-# Move next only if `homebrew` is installed
-# if command -v brew >/dev/null 2>&1; then
+## Move next only if `homebrew` is installed
+#if command -v brew >/dev/null 2>&1; then
 #  # Load rupa's z if installed
 #  . `brew --prefix`/etc/profile.d/z.sh
-# fi
+#fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,3 +25,4 @@ source $HOME/.dotfiles/zsh_envs
 #AutoComplete
 source /usr/local/share/zsh/site-functions/_aws
 
+autoload -Uz compinit && compinit -i
